@@ -1,0 +1,145 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+/* Custom Colors for CV Analyzer Pro */
+@theme {
+  /* Primary Colors (Blue theme) */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  
+  /* Success Colors (Green) */
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+  
+  /* Warning Colors (Orange/Yellow) */
+  --color-warning-50: #fefcf3;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+  
+  /* Danger Colors (Red) */
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-300: #fca5a5;
+  --color-danger-400: #f87171;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+  --color-danger-800: #991b1b;
+  --color-danger-900: #7f1d1d;
+  
+  /* Custom CV Analyzer Colors */
+  --color-score-excellent: #10b981;
+  --color-score-good: #3b82f6;
+  --color-score-fair: #f59e0b;
+  --color-score-poor: #ef4444;
+  
+  /* Background Gradients */
+  --color-gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color-gradient-success: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  --color-gradient-warning: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  --color-gradient-danger: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  
+  /* Custom Animations */
+  --animate-bounce-slow: bounce 2s infinite;
+  --animate-pulse-slow: pulse 3s infinite;
+  --animate-spin-slow: spin 3s linear infinite;
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  
+  /* Custom Shadows */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-progress: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Custom Utility Classes */
+.animate-fade-in {
+  animation: var(--animate-fade-in);
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* Custom Component Styles */
+.card-shadow {
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.progress-ring {
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-primary-50: #1e3a8a;
+    --color-primary-900: #eff6ff;
+  }
+}
