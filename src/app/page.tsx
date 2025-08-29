@@ -18,10 +18,10 @@ export default function Home() {
           <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
             <div className="container mx-auto px-6 text-center">
               <h1 className="text-5xl font-bold text-gray-800 mb-6">
-                Welcome to change your CV
+                this is my first change on git 
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Analyze your CV with AI-powered insights. Get detailed feedback
+                Analyze your CV with AI-powered with first change  insights. Get detailed feedback
                 on content, formatting, and optimization suggestions to land
                 your dream job.
               </p>
